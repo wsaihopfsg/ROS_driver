@@ -38,7 +38,7 @@ void PFInterface::change_state(PFState state)
         text = "Running";
     if(state_ == PFState::SHUTDOWN)
         text = "Shutdown";
-    if(state_ == PFState::ERROR)
+    if(state_ == PFState::ERRORS)
         text = "Error";
     ROS_INFO("Device state changed to %s", text.c_str());
 }
