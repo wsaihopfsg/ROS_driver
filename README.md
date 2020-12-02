@@ -19,15 +19,22 @@
   * Initializing rosdep
   * Configure Chocolatey sources
   * Create a catkin Workspace
-    * if there is Python runtime error `File "C:\opt\ros\melodic\x64\\lib\encodings\__init__.py", line 123` when `wstool init src melodic-desktop.rosinstall` is invoked, unset the PYTHONHOME and PYTHONPATH by
-    ```
-    set PYTHONHOME=
-    set PYTHONPATH=
-    ```
+    * if there is Python runtime error `File "C:\opt\ros\melodic\x64\\lib\encodings\__init__.py", line 123` when `wstool init src melodic-desktop.rosinstall` is invoked, unset  PYTHONHOME and PYTHONPATH by
+      ```
+      set PYTHONHOME=
+      set PYTHONPATH=
+      ```
   * Resolving Dependencies
   
 **Clone the repository:** Clone the repository in the `src` folder of your ROS workspace. For example my src folder is `C:\ros_catkin_ws\src\catkin\bin\src`
 ```
 git clone --branch=master https://github.com/PepperlFuchs/ROS_driver.git
 ```
-**Install the missing dependencies:**
+**Install the missing dependencies:** My workspace folder is `C:\ros_catkin_ws\src\catkin\bin\src`
+```
+cd <path/to/workspace>
+rosdep update
+rosdep install --from-paths src --ignore-src --rosdistro melodic -r -y
+```
+For windows, the dependencies `curlpp` and `jsoncpp` are not available and have to be downloaded by `vspkg`
+
