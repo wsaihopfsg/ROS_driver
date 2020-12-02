@@ -47,11 +47,11 @@ struct HandleInfo
 struct ScanConfig
 {
   bool watchdog = false;
-  uint watchdogtimeout = 0;
+  uint32_t watchdogtimeout = 0;
   std::string packet_type = "";
   int start_angle = 0;
-  uint max_num_points_scan = 0;
-  uint skip_scans = 0;
+  uint32_t max_num_points_scan = 0;
+  uint32_t skip_scans = 0;
 
   // void print()
   // {
@@ -417,9 +417,7 @@ public:
     return std::string("");
   }
 
-  virtual ScanParameters get_scan_parameters(int start_angle=0)
-  {
-  }
+  virtual ScanParameters get_scan_parameters(int start_angle=0);
 
   virtual void handle_reconfig(pf_driver::PFDriverR2000Config &config, uint32_t level)
   {
