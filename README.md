@@ -47,3 +47,7 @@ vcpkg integrate install
 vcpkg install jsoncpp
 vcpkg install curlpp
 ```
+---
+**from this point onwards a lot of trial-and-error was involved, in trying to make the code compile)**
+
+In trying to compile the code, there were errors related to the 2 missing dependencies above. The `CMakeLists.txt` file
