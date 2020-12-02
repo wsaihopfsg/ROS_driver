@@ -9,9 +9,12 @@
 
   * For Step 5, we just need 5.1 ROS Last Known Good (LKG) Build Installation because ROS 2 is not relevant to this code.
 
-  * After Step 6 is finished, we test the installation by invoking the newly created ROS Command Window shortcut, and run `roscore` for a ROS master.
-
-  * Invoke another instance of the ROS Command Window shortcut, and run `rostopic list`. The topics published by the master will be listed. Next try running `rviz` too. If these can be run without issues, the ROS on Windows installation is done.
+  * After Step 6 is finished, we test the installation by 
+    1. Invoke the newly created ROS Command Window shortcut, and run `roscore` for a ROS master.
+    2. Invoke another instance of the ROS Command Window shortcut, and run `rostopic list`. The topics published by the master will be listed. 
+    3. Next try running `rviz` too. 
+    
+    If these can be run without issues, the ROS on Windows installation is done.
 
 **Installing bootstrap dependencies:** Follow the steps in https://ms-iot.github.io/ROSOnWindows/Build/source.html for 
 
