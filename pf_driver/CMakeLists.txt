@@ -19,6 +19,8 @@ find_package(catkin REQUIRED COMPONENTS
 find_package(Boost REQUIRED COMPONENTS  thread system)
 find_package(jsoncpp REQUIRED)
 find_package(PkgConfig REQUIRED)
+find_package(unofficial-curlpp CONFIG REQUIRED)
+find_package(ZLIB REQUIRED)
 pkg_check_modules(CURLPP REQUIRED curlpp)
 
 generate_dynamic_reconfigure_options(
@@ -54,7 +56,7 @@ add_executable(ros_main src/ros/ros_main.cpp
                         src/pf/pf_packet.cpp
                         src/communication.cpp)
 target_link_libraries(ros_main
-  ${catkin_LIBRARIES} curlpp curl jsoncpp
+  ${catkin_LIBRARIES} curlpp curl jsoncpp unofficial::curlpp::curlpp
 )
 add_dependencies(ros_main ${PROJECT_NAME}_gencfg)
 add_dependencies(ros_main ${${PROJECT_NAME}_EXPORTED_TARGETS})
