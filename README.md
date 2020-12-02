@@ -5,11 +5,30 @@
 **Required platform:**  
 64-bit Windows 10 Desktop or Windows 10 IoT Enterprise
 
-**ROS on Windows installation**  
+**ROS on Windows installation:**  
 Access http://wiki.ros.org/Installation/Windows and click on `melodic` ![image](https://user-images.githubusercontent.com/75309631/100847609-fee64f80-34ba-11eb-9c47-96670d437385.png), and follow the steps there.
 
 For Step 5, we just need 5.1 ROS Last Known Good (LKG) Build Installation because ROS 2 is not relevant to this code.
 
 After Step 6 is finished, we test the installation by invoking the newly created ROS Command Window shortcut, and run `roscore` for a ROS master.
 
-Invoke another instance of the ROS Command Window shortcut, and run `rostopic list`
+Invoke another instance of the ROS Command Window shortcut, and run `rostopic list`. The topics published by the master will be listed. Next try running `rviz` too. If these can be run without issues, the ROS on Windows installation is done.
+
+**Installing bootstrap dependencies:**
+Follow the steps in https://ms-iot.github.io/ROSOnWindows/Build/source.html for 
+
+  * All build tools (compiler, CMake, etc.) installation
+  * Initializing rosdep
+  * Configure Chocolatey sources
+  
+**Installing R2000/R2300 drivers from source (ROS for Windows)**
+
+**Create a catkin Workspace:**
+
+In order to build the core packages, you will need a catkin workspace. Create one now:
+```
+mkdir c:\ros_catkin_ws
+cd c:\ros_catkin_ws
+```
+**Clone the repository:**
+Clone the repository in the `src` folder of your ROS workspace
