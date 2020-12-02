@@ -5,4 +5,5 @@
 **Required platform:**  
 64-bit Windows 10 Desktop or Windows 10 IoT Enterprise
 
-  
+**ROS on Windows installation**  
+Access http://wiki.ros.org/Installation/Windows and click on the melodic button
