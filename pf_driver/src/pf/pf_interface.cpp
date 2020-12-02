@@ -208,11 +208,11 @@ void PFInterface::reconfig_callback_r2000(pf_driver::PFDriverR2000Config &config
 {
 
       bool watchdog = false;
-  uint watchdogtimeout = 0;
+  uint32_t watchdogtimeout = 0;
   std::string packet_type = "";
   int start_angle = 0;
-  uint max_num_points_scan = 0;
-  uint skip_scans = 0;
+  uint32_t max_num_points_scan = 0;
+  uint32_t skip_scans = 0;
     if(product_ != "R2000")
         return;
     if(state_ != PFState::RUNNING)
