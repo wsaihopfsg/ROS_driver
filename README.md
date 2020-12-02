@@ -20,6 +20,7 @@
   * Configure Chocolatey sources
   * Create a catkin Workspace
     * if there is Python runtime error `File "C:\opt\ros\melodic\x64\\lib\encodings\__init__.py", line 123` when `wstool init src melodic-desktop.rosinstall` is invoked, unset  PYTHONHOME and PYTHONPATH by
+    
       ```
       set PYTHONHOME=
       set PYTHONPATH=
@@ -36,5 +37,5 @@ cd <path/to/workspace>
 rosdep update
 rosdep install --from-paths src --ignore-src --rosdistro melodic -r -y
 ```
-For windows, the dependencies `curlpp` and `jsoncpp` are not available and have to be downloaded by `vspkg`
+For windows, the dependencies `curlpp` and [`jsoncpp`](https://github.com/open-source-parsers/jsoncpp) are [not available and have to be downloaded by `vspkg`](https://github.com/ros-industrial-consortium/tesseract/issues/146#issue-505378940)
 
