@@ -48,9 +48,9 @@ vcpkg install jsoncpp
 vcpkg install curlpp
 ```
 ---
-**from this point onwards a lot of trial-and-error was involved, in trying to make the code compile)**
+**from this point onwards a lot of trial-and-error was involved in trying to make the code compile)**
 
-  * In trying to compile the code, there were errors related to the 2 missing dependencies above. All of the edits were made to make the original code compilable.
+  * All of the edits were made to make the original code compilable. Please refer to the individual files for the reasons why the commits were made.
 
   * I am not sure why the files downloaded with vcpkg were not included, as a work-around I copied all the files from `C:\opt\ros\melodic\x64\tools\vcpkg\installed\x64-windows\include` to `C:\ros_catkin_ws\src\catkin\bin\src\ROS_driver\pf_driver\include\pf_driver\pf`. 
   
@@ -62,4 +62,5 @@ vcpkg install curlpp
     ````
     ![image](https://user-images.githubusercontent.com/75309631/100874537-b2f9d180-34df-11eb-8f08-b661e46114e1.png)
 
-
+  * The code should be able to `catkin_make` and compile without error. However at linking stage, a `LINK : fatal error LNK1104: cannot open file 'curlpp.lib'` error occured despite the path of curlpp.lib being correctly displayed during the linking stage. **No idea how to solve this**
+    ![error](https://user-images.githubusercontent.com/75309631/100875191-a75ada80-34e0-11eb-9f89-8ec0d4896e1f.jpg)
