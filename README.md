@@ -50,4 +50,16 @@ vcpkg install curlpp
 ---
 **from this point onwards a lot of trial-and-error was involved, in trying to make the code compile)**
 
-In trying to compile the code, there were errors related to the 2 missing dependencies above. The `CMakeLists.txt` file
+  * In trying to compile the code, there were errors related to the 2 missing dependencies above. All of the edits were made to make the original code compilable.
+
+  * I am not sure why the files downloaded with vcpkg were not included, as a work-around I copied all the files from `C:\opt\ros\melodic\x64\tools\vcpkg\installed\x64-windows\include` to `C:\ros_catkin_ws\src\catkin\bin\src\ROS_driver\pf_driver\include\pf_driver\pf`. 
+  
+  * As a result of copying the include folder, some pre-processor at the header files are changed to absolute path with "".
+  
+  * During compilation this warning occurs quite often. [To get rid of it](https://docs.microsoft.com/en-us/cpp/porting/modifying-winver-and-win32-winnt?view=msvc-160), we need to add the following pre-processor to `C:\opt\ros\melodic\x64\include\boost-1_66\boost\asio\detail\config.hpp`
+    ```
+    #define _WIN32_WINNT 0x0A00
+    ````
+    ![image](https://user-images.githubusercontent.com/75309631/100874537-b2f9d180-34df-11eb-8f08-b661e46114e1.png)
+
+
