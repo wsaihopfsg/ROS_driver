@@ -55,7 +55,7 @@ private:
         INIT,
         RUNNING,
         SHUTDOWN,
-        ERROR
+        ERRORS
     };
     PFState state_;
     std::string product_;
