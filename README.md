@@ -29,7 +29,7 @@
   
 **Clone the repository:** Clone the repository in the `src` folder of your ROS workspace. For example my src folder is `C:\ros_catkin_ws\src\catkin\bin\src`
 ```
-git clone --branch=master https://github.com/PepperlFuchs/ROS_driver.git
+git clone --branch=windows https://github.com/wsaihopfsg/ROS_driver.git
 ```
 **Install the missing dependencies:** My workspace folder is `C:\ros_catkin_ws\src\catkin\bin\src`
 ```
@@ -37,5 +37,13 @@ cd <path/to/workspace>
 rosdep update
 rosdep install --from-paths src --ignore-src --rosdistro melodic -r -y
 ```
-For windows, the dependencies `curlpp` and [`jsoncpp`](https://github.com/open-source-parsers/jsoncpp) are [not available and have to be downloaded by `vspkg`](https://github.com/ros-industrial-consortium/tesseract/issues/146#issue-505378940)
+For windows, the dependencies `curlpp` and [`jsoncpp`](https://github.com/open-source-parsers/jsoncpp) are [not available and have to be downloaded by `vcpkg`](https://github.com/ros-industrial-consortium/tesseract/issues/146#issue-505378940)
 
+```
+cd\opt
+git clone https://github.com/Microsoft/vcpkg.git
+bootstrap-vcpkg
+vcpkg integrate install
+vcpkg install jsoncpp
+vcpkg install curlpp
+```
