@@ -17,6 +17,6 @@ public:
     virtual void read(PFR2000Packet_C &packet) = 0;
     virtual void read(PFR2300Packet_C1 &packet) = 0;
 
-    virtual bool start();
-    virtual bool stop();
+    virtual bool start() = 0;
+    virtual bool stop() = 0;
 };
