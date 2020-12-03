@@ -417,7 +417,10 @@ public:
     return std::string("");
   }
 
-  virtual ScanParameters get_scan_parameters(int start_angle=0);
+  virtual ScanParameters get_scan_parameters(int start_angle=0)
+  {
+    return params;
+  }
 
   virtual void handle_reconfig(pf_driver::PFDriverR2000Config &config, uint32_t level)
   {
