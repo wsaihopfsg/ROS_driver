@@ -21,8 +21,8 @@ public:
     virtual void set_scan_params(ScanParameters params)
     {
     }
-    virtual bool start();
-    virtual bool stop();
+    virtual bool start() = 0;
+    virtual bool stop() = 0;
 };
 
 //TCP / UDP
