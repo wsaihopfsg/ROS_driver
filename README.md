@@ -76,9 +76,9 @@ vcpkg install curlpp
   ```
   roslaunch pf_driver r2300.launch
   ```
-  * There is run time error. Probably due to paths issue again
+  * There is run time error. Probably due to paths issue again 
   ![image](https://user-images.githubusercontent.com/75309631/101022490-6cbe7400-35ac-11eb-92df-1dae4d25936b.png)
     
 **Remaining issue:**
-  * How to include the vcpkg libraries properly, which hopefully will solve the run time error.
+  * How to include the vcpkg libraries properly, which hopefully will solve the run time error above.
   
