@@ -66,5 +66,6 @@ vcpkg install curlpp
     ````
     ![image](https://user-images.githubusercontent.com/75309631/100874537-b2f9d180-34df-11eb-8f08-b661e46114e1.png)
 
-  * The code should be able to `catkin_make` and compile without error. However at linking stage, a `LINK : fatal error LNK1104: cannot open file 'curlpp.lib'` error occured despite the path of curlpp.lib being correctly displayed during the linking stage. **No idea how to solve this**
-    ![error](https://user-images.githubusercontent.com/75309631/100875191-a75ada80-34e0-11eb-9f89-8ec0d4896e1f.jpg)
+  * The code should be able to `catkin_make` and compile without error. However at linking stage, 5 unresolved externals were reported. They are all related to virtual methods that I have edited.
+  **Still debugging this**
+    
