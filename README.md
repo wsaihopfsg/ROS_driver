@@ -68,4 +68,6 @@ vcpkg install curlpp
 
   * The code should be able to `catkin_make` and build without error. In my example the executable is located at ` C:\ros_catkin_ws\src\catkin\bin\devel\lib\pf_driver\ros_main.exe`
   
-    
+Remaining issues:
+  * How to include the vcpkg libraries properly
+  * How to use use ros_main with roslaunch?
