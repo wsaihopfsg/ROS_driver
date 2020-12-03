@@ -40,7 +40,7 @@ cd <path/to/workspace>
 rosdep update
 rosdep install --from-paths src --ignore-src --rosdistro melodic -r -y
 ```
-For windows, the dependencies `curlpp` and [`jsoncpp`](https://github.com/open-source-parsers/jsoncpp) are [not available and have to be downloaded by `vcpkg`](https://github.com/ros-industrial-consortium/tesseract/issues/146#issue-505378940)
+There may be errors such as `pf_driver: No definition of [curlpp-dev] for OS [windows]` because for windows, the dependencies `curlpp` and [`jsoncpp`](https://github.com/open-source-parsers/jsoncpp) are [not available and have to be downloaded by `vcpkg`](https://github.com/ros-industrial-consortium/tesseract/issues/146#issue-505378940)
 
 ```
 cd\opt
