@@ -34,7 +34,7 @@
 ```
 git clone --branch=windows https://github.com/wsaihopfsg/ROS_driver.git
 ```
-**Install the missing dependencies:** My workspace folder is `C:\ros_catkin_ws\src\catkin\bin\src`
+**Install the missing dependencies:** My workspace folder is `C:\ros_catkin_ws\src\catkin\bin\`
 ```
 cd <path/to/workspace>
 rosdep update
