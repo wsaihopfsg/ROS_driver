@@ -66,6 +66,6 @@ vcpkg install curlpp
     ````
     ![image](https://user-images.githubusercontent.com/75309631/100874537-b2f9d180-34df-11eb-8f08-b661e46114e1.png)
 
-  * The code should be able to `catkin_make` and compile without error. However at linking stage, 5 unresolved externals were reported. They are all related to virtual functions that don't return a value, which compiles fine in Linux but not in Visual Studio.
+  * The code should be able to `catkin_make` and compile without error. However at linking stage, 1 unresolved external was reported, related to a virtual function get_scan_parameters that doesn't return a value, which compiles fine in Linux but not in Visual Studio.
   **Still debugging this**
     
