@@ -70,7 +70,7 @@ vcpkg install curlpp
   
   * If recompilation is needed for any reason, perform a `catkin_make clean` before invoking `catkin_make`
   
-  * Run `setup_cached.bat` to setup the roslaunch environment. In my example it is at `C:\ros_catkin_ws\src\catkin\bin\build\catkin_generated`
+  * If `echo %ROS_PACKAGE_PATH%` does not show the path to the package (in my case it's `C:/ros_catkin_ws/src/catkin/bin/src`), run `setup_cached.bat` to setup the roslaunch environment. In my example the batch file is at `C:\ros_catkin_ws\src\catkin\bin\build\catkin_generated`
   
   * Edit `r2300.launch` and ensure that the R2300 IP address is correct.
   
@@ -78,7 +78,7 @@ vcpkg install curlpp
   ```
   roslaunch pf_driver r2300.launch
   ```
-  * There is run time error. Probably due to paths issue again 
+  * There is this run time error. Probably due to paths issue again 
     ![image](https://user-images.githubusercontent.com/75309631/101022490-6cbe7400-35ac-11eb-92df-1dae4d25936b.png)
     
 **Remaining issue:**
