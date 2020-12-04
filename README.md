@@ -80,10 +80,11 @@ vcpkg install curlpp
     ```
     roslaunch pf_driver r2300.launch
     ```
-  * There is this run time error. Probably due to paths issue again 
+  * There is this run time error. due to path issue. 
     
     ![image](https://user-images.githubusercontent.com/75309631/101022490-6cbe7400-35ac-11eb-92df-1dae4d25936b.png)
+    ![image](https://user-images.githubusercontent.com/75309631/101110137-513a8400-3613-11eb-9b9f-adbd889ff087.png)
     
 **Remaining issue:**
-  * Solve the libcurl-d.dll missing run time error above.
+  * Solve the missing dll run time error above.
   
