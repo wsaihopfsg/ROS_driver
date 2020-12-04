@@ -77,9 +77,9 @@ vcpkg install curlpp
   * Edit `r2300.launch` and ensure that the R2300 IP address is correct.
   
   * Launch the driver by 
-  ```
-  roslaunch pf_driver r2300.launch
-  ```
+    ```
+    roslaunch pf_driver r2300.launch
+    ```
   * There is this run time error. Probably due to paths issue again 
     
     ![image](https://user-images.githubusercontent.com/75309631/101022490-6cbe7400-35ac-11eb-92df-1dae4d25936b.png)
