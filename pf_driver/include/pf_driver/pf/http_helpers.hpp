@@ -29,11 +29,11 @@
 #include <cerrno>
 #include <sstream>
 
-#include "curlpp/cURLpp.hpp"
-#include "curlpp/Easy.hpp"
-#include "curlpp/Options.hpp"
-#include "curlpp/Exception.hpp"
-#include "json/json.h"
+#include <curlpp/cURLpp.hpp>
+#include <curlpp/Easy.hpp>
+#include <curlpp/Options.hpp>
+#include <curlpp/Exception.hpp>
+#include <json/json.h>
 
 using param_type = std::pair<std::string, std::string>;
 using param_map_type = std::map<std::string, std::string>;
