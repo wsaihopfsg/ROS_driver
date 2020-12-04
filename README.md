@@ -55,10 +55,10 @@ vcpkg install curlpp
 
   * All of the edits were made to make the original code compilable. Please refer to the individual files for the reasons why the commits were made.
 
-  * I am not sure why the files downloaded with vcpkg were not included, as a work-around I copied all the files from `C:\opt\ros\melodic\x64\tools\vcpkg\installed\x64-windows\include` to `C:\ros_catkin_ws\src\catkin\bin\src\ROS_driver\pf_driver\include\pf_driver\pf`. 
+  * <del>I am not sure why the files downloaded with vcpkg were not included, as a work-around I copied all the files from `C:\opt\ros\melodic\x64\tools\vcpkg\installed\x64-windows\include` to `C:\ros_catkin_ws\src\catkin\bin\src\ROS_driver\pf_driver\include\pf_driver\pf`. </del>
   
-  * As a result of copying the include folder, some pre-processor at the header files are changed to absolute path with "", for example `C:\ros_catkin_ws\src\catkin\bin\src\ROS_driver\pf_driver\include\pf_driver\pf\curlpp`
-  ![image](https://user-images.githubusercontent.com/75309631/100881247-a9289c00-34e8-11eb-8fda-5616cf93df33.png)
+  * <del>As a result of copying the include folder, some pre-processor at the header files are changed to absolute path with "", for example `C:\ros_catkin_ws\src\catkin\bin\src\ROS_driver\pf_driver\include\pf_driver\pf\curlpp`
+  ![image](https://user-images.githubusercontent.com/75309631/100881247-a9289c00-34e8-11eb-8fda-5616cf93df33.png) </del>
   
   * During compilation this warning occurs quite often. [To get rid of it](https://docs.microsoft.com/en-us/cpp/porting/modifying-winver-and-win32-winnt?view=msvc-160), we need to add the following pre-processor to `C:\opt\ros\melodic\x64\include\boost-1_66\boost\asio\detail\config.hpp`
     ```
@@ -66,6 +66,8 @@ vcpkg install curlpp
     ````
     ![image](https://user-images.githubusercontent.com/75309631/100874537-b2f9d180-34df-11eb-8f08-b661e46114e1.png)
 
+  * Invoke `vcpkg integrate install` to apply user-wide integration for the 2 vcpkg modules downloaded
+  
   * The code should be able to `catkin_make` and build without error. In my example the executable is located at ` C:\ros_catkin_ws\src\catkin\bin\devel\lib\pf_driver\ros_main.exe`
   
   * If recompilation is needed for any reason, perform a `catkin_make clean` before invoking `catkin_make`
