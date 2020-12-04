@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.7)
 project(pf_driver)
 
-add_compile_options(-std=c++14)
+#add_compile_options(-std=c++14)
 
 find_package(catkin REQUIRED COMPONENTS
   roscpp
