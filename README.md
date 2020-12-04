@@ -76,15 +76,21 @@ vcpkg install curlpp
   
   * Edit `r2300.launch` and ensure that the R2300 IP address is correct.
   
+  * Check that the folder to the vcpkg dlls (eg libcurl-d.dll, zlibd1.dll etc) is in the PATH by `echo %PATH%`. If it is not in the PATH, please add it in manually by (in my example the dlls are at `C:\opt\ros\melodic\x64\tools\vcpkg\installed\x64-windows\debug\bin`)
+    ```
+    set PATH=C:\opt\ros\melodic\x64\tools\vcpkg\installed\x64-windows\debug\bin;%PATH%
+    ```
+  * If a ROS master is not already running, invoke a new ROS Command Window shortcut, and run `roscore`. 
+  
   * Launch the driver by 
     ```
     roslaunch pf_driver r2300.launch
     ```
-  * There is this run time error. due to path issue. 
-    
-    ![image](https://user-images.githubusercontent.com/75309631/101022490-6cbe7400-35ac-11eb-92df-1dae4d25936b.png)
-    ![image](https://user-images.githubusercontent.com/75309631/101110137-513a8400-3613-11eb-9b9f-adbd889ff087.png)
-    
+  * There is this run time error. 
+    ```
+    process has died [pid 21884, exit code -1073740940, cmd C:\ros_catkin_ws\src\catkin\bin\devel\lib\pf_driver\ros_main.exe udp 192.168.0.78 0 R2300 __name:=r2300_node
+    ```
+        
 **Remaining issue:**
-  * Solve the missing dll run time error above.
+  * Solve the run time error above.
   
