@@ -68,7 +68,7 @@ vcpkg install curlpp
 
   * Invoke `vcpkg integrate install` to apply user-wide integration for the 2 vcpkg modules downloaded
   
-  * The code should be able to `catkin_make` and build without error. In my example the executable is located at ` C:\ros_catkin_ws\src\catkin\bin\devel\lib\pf_driver\ros_main.exe`
+  * The code should be able to `catkin_make` and build without error. In my example `catkin_make` is located at `C:\ros_catkin_ws\src\catkin\bin` and the compiled executable at ` C:\ros_catkin_ws\src\catkin\bin\devel\lib\pf_driver\ros_main.exe` 
   
   * If recompilation is needed for any reason, perform a `catkin_make clean` before invoking `catkin_make`
   
