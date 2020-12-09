@@ -94,3 +94,13 @@ vcpkg install curlpp
 **Remaining issue:**
   * Solve the run time error above.
   
+ ---
+ **Visual Studio**
+   * The `add_library` function in vcpkg conflicts with catkin, resulting in this error
+   ```
+   Error		CMake Error at C:/opt/ros/melodic/x64/tools/vcpkg/scripts/buildsystems/vcpkg.cmake:362 (_add_library):
+   Maximum recursion depth of 1000 exceeded		C:/opt/ros/melodic/x64/tools/vcpkg/scripts/buildsystems/vcpkg.cmake	362	
+   ```
+   There doesn't seem to be any simple solution to this issue, since we need both to run.
+
+  
