@@ -1,0 +1,36 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "ROS: Launch",
+            "type": "ros",
+            "request": "launch",
+            "target": "/home/pepperlfuchsctss/ros_catkin_ws/src/ROS_driver/pf_driver/launch/r2300.launch",
+            "preLaunchTask": "ROS: catkin_make PF_Driver"
+        }/*,
+        {
+            "name": "PF_Driver Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/devel/lib/pf_driver/ros_main",
+            "stopAtEntry": false,
+            "preLaunchTask": "ROS: catkin_make PF_Driver",
+            "avoidWindowsConsoleRedirection": true,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "targetArchitecture": "x64",
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        }*/
+    ]
+}
