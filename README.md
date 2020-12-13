@@ -1,5 +1,5 @@
 ## ROS drivers for R2000 and R2300 laser scanners on Windows Subsystem for Linux (WSL) 
-
+**Code runs, but program is unable to receive packets sent from R2300**
 [![Build Status](https://travis-ci.org/PepperlFuchs/ROS_driver.svg?branch=wsl-vscode)](https://github.com/wsaihopfsg/ROS_driver/tree/wsl-vscode)
 
 **Required platform:**  
@@ -70,3 +70,12 @@ on the lower-left corner
 **Setting Break Points**  
 You may set break points anywhere in the code. The code will be compiled (using the `ROS: catkin_make PF_Driver` task defined in `tasks.json`) and `roslaunch` with the `.launch` file supplied in the "target" in `launch.json`. The following picture shows the code at break point in line 19 of `'ros_main.cpp`, from which you may perform debugging
 ![image](https://user-images.githubusercontent.com/75309631/101986850-7e4dfd00-3ccb-11eb-9a75-5e47ffeb82b9.png)  
+
+---  
+**Issue: Nothing displayed from RViz**
+Symptoms:
+  * From Wireshark, can see that the R2300 (192.168.0.78) is sending packets to WSL (192.168.202.83)
+    ![image](https://user-images.githubusercontent.com/75309631/102000901-23e28a00-3d27-11eb-8c11-0f9c7297cc1f.png)
+  * The packets seem to be valid, starting with the magic byte 0xa25c
+    ![image](https://user-images.githubusercontent.com/75309631/102000918-4a082a00-3d27-11eb-8cff-d63c2ff80451.png)
+  * However nothing is published `rostopic echo /cloud`
