@@ -83,4 +83,6 @@ Symptoms:
     - can ping from Gateway to WSL2
     - cannot ping from another pc to WSL2  
     ![image](https://user-images.githubusercontent.com/75309631/102061375-5f1bb080-3e2e-11eb-9ee6-fadcf629fb32.png)
+  * [This video](https://www.youtube.com/watch?v=yCK3easuYm4) suggests to use `netsh` to do a v4tov4 port forward, but it only works for TCP
+    ![image](https://user-images.githubusercontent.com/75309631/102082801-8a61c800-3e4d-11eb-9ab1-3dfdec305e1c.png)
 
