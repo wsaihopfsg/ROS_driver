@@ -84,5 +84,8 @@ Symptoms:
     - cannot ping from another pc to WSL2  
     ![image](https://user-images.githubusercontent.com/75309631/102061375-5f1bb080-3e2e-11eb-9ee6-fadcf629fb32.png)
   * [This video](https://www.youtube.com/watch?v=yCK3easuYm4) suggests to use `netsh` to do a v4tov4 port forward, but it only works for TCP
-    ![image](https://user-images.githubusercontent.com/75309631/102082801-8a61c800-3e4d-11eb-9ab1-3dfdec305e1c.png)
+    ![image](https://user-images.githubusercontent.com/75309631/102082801-8a61c800-3e4d-11eb-9ab1-3dfdec305e1c.png)  
+**Solution:**
+  * Since my laptop is on Windows Enterprise, I can manipulate the Hyper-V settings to make it run in bridge mode. The details can be found in [here](https://github.com/microsoft/WSL/issues/4150#issuecomment-656407014)  
+  ![image](https://user-images.githubusercontent.com/75309631/102197120-b0de3c80-3efb-11eb-9914-cf481ef990c4.png)
 
