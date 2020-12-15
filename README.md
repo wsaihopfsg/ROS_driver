@@ -1,9 +1,8 @@
 ## ROS drivers for R2000 and R2300 laser scanners on Windows Subsystem for Linux (WSL) 
-**Code runs, but program is unable to receive packets sent from R2300**
 [![Build Status](https://travis-ci.org/PepperlFuchs/ROS_driver.svg?branch=wsl-vscode)](https://github.com/wsaihopfsg/ROS_driver/tree/wsl-vscode)
 
 **Required platform:**  
-Windows 10 (OS build 20262 or higher)
+Windows 10 (OS build 20262 or higher), Pro, Enterprise or Windows Server versions
   
 **AIM**  
 Run and debug the code in Windows
