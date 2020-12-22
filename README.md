@@ -71,7 +71,7 @@ You may set break points anywhere in the code. The code will be compiled (using 
 ![image](https://user-images.githubusercontent.com/75309631/101986850-7e4dfd00-3ccb-11eb-9a75-5e47ffeb82b9.png)  
 
 ---  
-**Issue: Nothing displayed from RViz**  
+**Solved Issue: Nothing displayed in RViz**  
 Symptoms:
   * From Wireshark, can see that the R2300 (192.168.0.78) is sending packets to WSL (192.168.202.83)
     ![image](https://user-images.githubusercontent.com/75309631/102000901-23e28a00-3d27-11eb-8c11-0f9c7297cc1f.png)
@@ -87,4 +87,9 @@ Symptoms:
 **Solution:**
   * Since my laptop is on Windows Enterprise, I can manipulate the Hyper-V settings to make it run in bridge mode. The details can be found in [here](https://github.com/microsoft/WSL/issues/4150#issuecomment-747152240)  
   ![image](https://user-images.githubusercontent.com/75309631/102197120-b0de3c80-3efb-11eb-9914-cf481ef990c4.png)
+
+---  
+**Outstanding Issue: Pretty printing does not work **  
+
+  * In `launch.json`, we are invoking roslaunch with `"type": "ros"`, but with this type we cannot enable pretty printing which is a property for `cppdbg`
 
