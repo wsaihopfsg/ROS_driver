@@ -69,6 +69,9 @@ on the lower-left corner
 **Setting Break Points**  
 You may set break points anywhere in the code. The code will be compiled (using the `ROS: catkin_make PF_Driver` task defined in `tasks.json`) and `roslaunch` with the `.launch` file supplied in the "target" in `launch.json`. The following picture shows the code at break point in line 19 of `'ros_main.cpp`, from which you may perform debugging
 ![image](https://user-images.githubusercontent.com/75309631/101986850-7e4dfd00-3ccb-11eb-9a75-5e47ffeb82b9.png)  
+**Pretty Printing**  
+To enable pretty printing, [invoke `-exec -enable-pretty-printing` at `DEBUG CONSOLE`](https://qiita.com/taka_horibe/items/50e4659e88d1ee3cd04a)
+![image](https://user-images.githubusercontent.com/75309631/102900638-89611400-44a7-11eb-9a75-125810dce17e.png)  
 
 ---  
 **Solved Issue: Nothing displayed in RViz**  
@@ -88,8 +91,4 @@ Symptoms:
   * Since my laptop is on Windows Enterprise, I can manipulate the Hyper-V settings to make it run in bridge mode. The details can be found in [here](https://github.com/microsoft/WSL/issues/4150#issuecomment-747152240)  
   ![image](https://user-images.githubusercontent.com/75309631/102197120-b0de3c80-3efb-11eb-9914-cf481ef990c4.png)
 
----  
-**Outstanding Issue: Pretty printing does not work **  
-
-  * In `launch.json`, we are invoking roslaunch with `"type": "ros"`, but with this type we cannot enable pretty printing which is a property for `cppdbg`
 
